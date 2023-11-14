@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#container{
+    background: url('frontpage.jpg'), black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    
+}
+
+.flex-outer,
+.flex-inner {
+	list-style:none;
+	padding-top: 100px;
+    padding-left: 100px;
+}
+.flex-outer {
+	max-width:800px;
+	margin:0 auto;
+}
+
+/*flexbox parent*/
+.flex-outer li, 
+.flex-inner {
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+.flex-inner {
+	padding:0 8px;
+	justify-content:space-between;
+}
+.flex-outer > li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.interest {
+	text-transform: capitalize;
+	letter-spacing: 0em;
+	padding:5px;
+	line-height: 50%;
+	font-size: 90%;
+}
+/*styling the labels*/
+.flex-outer li , 
+.flex-outer li p {
+	padding:8px;
+	font-weight:300;
+	text-transform:uppercase;
+}
+
+/*style labels with flex-grow an flex-basis*/
+.flex-outer > li > label,
+.flex-outer li p {
+	flex:1 0 120px;
+	max-width:220px;
+}
+/*styling form fields*/
+.flex-outer > li > label + *,
+.flex-inner {
+	flex:1 0 200px;
+}
+.flex-outer li p {
+	margin:0;
+}
+.flex-outer li input:not([type="checkbox"]),
+.flex-outer li textarea {
+	padding:15px;
+	border:none;
+}
+input, textarea {
+	border:1px solid #aaa;
+	box-shadow: 0 0 3px #ccc, 0 5px 30px #eee inset;
+	border-radius: 3px;
+	transition: padding .25s;
+}
+input:focus, textarea:focus {
+	background:#fff;
+	border:1px solid #555;
+	box-shadow:0 0 3px #aaa;
+	padding-right: 70px; /*Adding Interactivity to form fields*/
+}
+
+
+
